@@ -1,6 +1,7 @@
 const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -11,11 +12,6 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".json", ".css", '.vue']
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000
   },
   module: {
     rules: [
